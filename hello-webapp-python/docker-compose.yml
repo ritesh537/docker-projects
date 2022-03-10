@@ -1,0 +1,22 @@
+version: '3.0'
+services:
+   hello_app:
+     container_name: "hello_app"
+     restart: always
+     build: .
+     networks:
+       - "frontend_network"
+   nginx:
+     container_name: "nginx"
+     restart: always
+     image: nginx:latest
+     volumes:
+       - ./nginx:/etc/nginx/conf.d
+     ports:
+        - "80:80"
+     networks:
+        - "frontend_network"
+networks:
+  frontend_network:
+    driver: bridge
+
