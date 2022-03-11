@@ -1,5 +1,7 @@
-Simple web calculator app 
+Simple web calculator app Docker Deployment
+
 App code is taken from https://github.com/rynrsts/simple-web-calculator.git
+
 Start the app in Docker
 
 $ docker-compose up --build 
